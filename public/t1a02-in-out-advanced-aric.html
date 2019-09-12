@@ -1,0 +1,16 @@
+<input type=text id="myName01" value="Aric"><br>
+<input type=text id="myAge01" value="16"><br>
+
+<input type=button value=run onclick="{
+   let myAge = Math.abs(document.getElementById('myAge01).value)
+   let myTemp = 'You are a teenager'
+   if (myAge <= 12){ myTemp = 'You are a child'}
+   if (myAge >= 20 &&  myAge < 65 ){ myTemp = 'You are an adult'}
+   if (myage >= 65){ myTemp = 'You can retire'}
+   
+//      ||=OR   && = AND  ! = NOT
+
+
+    document.getElementById('myDiv01').innerHTML = myTemp
+}">
+div id="myDiv01">...</div>
