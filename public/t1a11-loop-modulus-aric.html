@@ -1,0 +1,46 @@
+<h1 align=center>t1a11-loop-modulus by Aric</h1>
+
+Enter any number of loops <input typr=text id="myText01"
+value="70"><br><br>
+
+<input type=button value="Modulus Decisions" onClick="{
+
+   let myLoopMax = document.getElementById('myText01').value
+   let myTemp =''
+   let myFontColour
+   
+   for (let myLoop=0;  myLoop <= myLoopMax; myLoop++){
+      myFontColour = 'black'
+      let myMessage = ''
+      
+      If (myLoop % 2 == 1) {
+         myFontColour = 'red'
+         myMessage += ' odd, '
+      }
+      
+      if (myLoop % 5 == 0) {
+         myFontColour = 'green'
+         myMessage += ' Divisible by 5, '
+      }
+      if (myLoop % 10 == 0) {
+         myFontColour = 'blue'
+         myMessage += ' Divisble by 10, '
+      }
+      
+      if (myLoop == 42) {
+         myMessage += ' *** Answer to the universe ***'
+      }
+      
+      if (myLoop ==57) {
+         myMessage += 'Mr. Ellis age, he thinks'
+      }
+      
+      
+      myTemp += '<font color='+myFontColour+'> Loop # ' +
+myLoop + '</font>'+ myMessage +'<br>'
+   }
+   
+   document.getElementById('myDiv01').innerHTML = myTemp
+}"><br><br>
+
+<div id="myDiv01">...</div>
